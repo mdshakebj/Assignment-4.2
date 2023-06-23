@@ -1,0 +1,13 @@
+<div class="container">
+    <h2>Players</h2>
+    <ul>
+      <li *ngFor="let player of players">
+        {{ player.name }} - {{ player.age }} - {{ player.team }}
+        <button (click)="deletePlayer(player.id)">Delete</button>
+        <button (click)="editPlayer(player)">Update</button>
+      </li>
+    </ul>
+  
+    <app-player-form [player]="selectedPlayer" (playerAdded)="addPlayer($event)" (playerUpdated)="updatePlayer($event)"></app-player-form>
+  </div>
+  

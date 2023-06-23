@@ -1,0 +1,17 @@
+<div>
+    <h2>Add/Update Player</h2>
+    <form (submit)="addOrUpdatePlayer()">
+      <label>Name: </label>
+      <input type="text" [(ngModel)]="player.name" name="name" required><br>
+  
+      <label>Age: </label>
+      <input type="number" [(ngModel)]="player.age" name="age" required><br>
+  
+      <label>Team: </label>
+      <input type="text" [(ngModel)]="player.team" name="team" required><br>
+  
+      <button type="submit">{{ player.id === 0 ? 'Add' : 'Update' }}</button>
+      <button type="button" (click)="resetForm()">Cancel</button>
+    </form>
+  </div>
+  
