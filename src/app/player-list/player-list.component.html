@@ -8,6 +8,6 @@
       </li>
     </ul>
   
-    <app-player-form [player]="selectedPlayer" (playerAdded)="addPlayer($event)" (playerUpdated)="updatePlayer($event)"></app-player-form>
+    <app-player-form [player]="selectedPlayer || defaultPlayer" (playerAdded)="addPlayer($event)" (playerUpdated)="updatePlayer($event)"></app-player-form>
   </div>
   

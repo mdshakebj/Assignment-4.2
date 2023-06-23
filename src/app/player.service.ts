@@ -22,4 +22,9 @@ export class PlayerService {
   addPlayer(player: any): Observable<any> {
     return this.http.post(this.apiUrl, player);
   }
+
+  updatePlayer(player: any): Observable<any> {
+    const url = `${this.apiUrl}/${player.id}`;
+    return this.http.put(url, player);
+  }
 }
